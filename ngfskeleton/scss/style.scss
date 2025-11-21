@@ -1,0 +1,329 @@
+/*
+Theme Name:NGF Skeleton Minify CSS and move to footer
+Theme URI: 
+Author: Neon Goldfish
+Description: Bootstrap v.3 basic theme for developers to build their new theme very fast and easy.
+Version: 1.5
+License: MIT
+Text Domain: bootstrap-basic
+Domain Path: /languages/
+Tags: white, gray, light, one-column, two-columns, three-columns, left-sidebar, right-sidebar, custom-background, custom-menu, featured-images, front-page-post-form, post-formats, threaded-comments, translation-ready
+
+This theme built with Twitter Bootstrap v.3. It is basic theme with basic style for build new theme with Bootstrap.
+
+*/
+/*Your Google Font Imports can go here */
+
+/*Sassy Variables*/
+$color1: #fe0000;
+$color2: #020204;
+$color3: #d6d6d6;
+$color4: #4e5053;
+$basic-font: Arial, Verdana, sans-serif;
+$headline-font: 'PT Sans', sans-serif;
+/*
+Required WordPress CSS
+*/
+.alignleft {
+	display: block;
+	float: none;
+	margin: 1.5em auto;
+}
+
+.alignright {
+	display: block;
+	float: none;
+	margin: 1.5em auto;
+}
+.bypostauthor {}
+.gallery-caption {}
+.sticky {}
+.wp-caption {
+	border: 1px solid #ccc;
+	margin-bottom: 1.5em;
+	max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin: 1.2% auto 0;
+	max-width: 98%;
+}
+.wp-caption-text {
+	text-align: center;
+}
+.wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
+}
+/* Utility Classes */
+	.clear {
+		clear: both;
+		display: block;
+		font-size: 0;
+		height: 0;
+		line-height: 0;
+		margin: 0;
+		overflow: hidden;
+		padding: 0;
+		width: 0;
+		visibility: hidden;
+	}
+/*Shareicons */
+.shareicons {
+    display:inline-block;
+    a {
+        display: inline-block;
+        background: #000;
+        color: #fff;
+        width: 35px;
+        height: 35px;
+        text-decoration: none !important;
+        font-size: 1.5em;
+        line-height: 35px;
+        text-align: center;    
+        vertical-align: middle;
+    }
+    a:hover {
+        opacity: .8;
+    }
+    .fa-facebook {
+        background: #3B5997;
+    }
+    .fa-twitter {
+        background: #00aced;
+        
+    }
+    .fa-google-plus {
+        background: #D64937
+    }
+    .fa-pinterest {
+        background: #bd081c;
+    }
+    .fa-linkedin {
+        background: #1985bc  
+    }
+}
+//Shop Nav and Mini Cart
+#shop-nav {
+    .cartlink {
+        cursor: pointer;
+    }
+    .minicart {
+        display: none;
+        background: #fff;
+        padding: 1em;
+        border: 1px solid;
+        text-align: left;
+        position: absolute;
+        right: 0;
+        width: 250px;
+        z-index: 20;
+    }
+    ul {
+        display: block;
+        margin:0;
+        padding:0;
+        li {
+            display: inline-block;
+            margin:0;
+            padding:0 .5em;
+            position: relative;
+        }
+    }
+}
+#content {
+    .widget {
+        label {
+            display: none;
+        }
+        select {
+            width:100%;
+            margin:0 0 1.5em;
+            padding:10px 15px;
+        }
+    }
+}
+#rotator img {
+    min-height:250px;
+    margin:0 auto;
+}
+#testimonial_carousel {
+    text-align: center;
+    .carousel-inner {
+        padding:0 2em;
+    }
+    .carousel-control {
+        background-image:none;
+        color:#fff;
+    }
+}
+img {
+    max-width: 100%;
+}
+/*mobile first*/
+#map p {
+    margin: 30px 0 2em;
+}
+/*header*/
+#navigation {
+    .navbar {
+        min-height: 0;
+        margin-bottom: 0;
+        border: none;
+    }
+    .container {
+        padding:0;
+    }
+    .dropdown-menu {
+        margin:0 10px;
+    }
+    ul {
+        li {
+            a {
+            }
+        }
+        li.open {
+            a {
+            }
+        }
+    }
+ }
+/*Content*/
+
+#content{
+    a {
+        text-decoration: underline;
+	}
+    #content a:hover {
+				cursor: pointer;
+			}
+
+    p {
+        margin: 0 0 1.5em 0;
+        padding: 0;
+    }
+    ol {
+        margin: 0 0 1.5em 0;
+        padding: 0 0 0 1.5em;
+        li {list-style-type: decimal;
+            list-style-position: outside;
+            margin: 0 0 10px 20px;
+            padding: 0 0 10px;            
+        }
+    }
+    ul {
+        margin: 0 0 1.5em 0;
+        padding: 0 0 0 1.5em;
+        li {list-style-type: disc;
+            list-style-position: outside;
+            margin: 0 0 10px 20px;
+            padding: 0 0 10px;
+        }
+    }
+}
+#features {
+    .feature {
+        margin-top:1em;
+        margin-bottom:1em;
+    }
+    h3 {
+        margin:0.5em 0;
+    }
+}
+#rotator {
+    .carousel-caption {
+        width:100%;
+        left:0;
+       
+    }
+    .carousel-control {
+        z-index: 8;
+    }
+    .slide {
+        background-repeat: no-repeat;
+        background-size:cover;
+        background-position: center;
+        height:300px
+    }
+}
+/* Progressive Enhancement */
+@media screen and (min-width: 320px) {}
+
+@media screen and (min-width: 480px) {}
+@media screen and (min-width: 600px) {}
+@media screen and (min-width: 768px) {
+    #navigation {
+        .dropdown-menu {
+            margin:0;
+            padding:0;
+        }
+    }
+    .alignright {
+        float:right;
+        margin: 0 0 1.5em 1.5em
+    }
+    .alignleft {
+        float: left;
+        margin: 0 1.5em 1.5em 0;
+    }
+    #rotator {
+        .slide {
+            height:500px
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .hidden-desktop {
+        display:none;
+    }
+   #navigation {
+       ul {
+           li:hover {
+               ul {
+                   display:block;
+               }
+           }
+       }
+    } 
+}
+@media screen and (min-width: 1200px) {
+}
+@media screen and (max-width:600px) { 
+    .ginput_recaptcha { 
+        transform: scale(0.8); 
+    } 
+}
+/* Bootstrap 5 columns!!! */
+.col-xs-15,
+.col-sm-15,
+.col-md-15,
+.col-lg-15 {
+position: relative;
+min-height: 1px;
+padding-right: 10px;
+padding-left: 10px;
+}
+
+.col-xs-15 {
+width: 20%;
+float: left;
+}
+@media (min-width: 768px) {
+.col-sm-15 {
+width: 20%;
+float: left;
+}
+}
+@media (min-width: 992px) {
+.col-md-15 {
+width: 20%;
+float: left;
+}
+}
+@media (min-width: 1200px) {
+.col-lg-15 {
+width: 20%;
+float: left;
+}
+}

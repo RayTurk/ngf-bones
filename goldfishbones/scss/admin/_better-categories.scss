@@ -1,0 +1,34 @@
+.better-categories {
+    
+    div.tabs-panel {
+        max-height: 400px;
+    }
+    li {
+        .expander {
+            color: #00a0d2;
+            display: inline-block;
+            padding: 0 1em;
+            cursor: pointer;
+            &:before {
+                display: inline-block;
+                content: '[+]';
+            }
+            &:hover {
+                font-weight: bold;
+            }
+        }
+    }
+    .children {
+        height: 0;
+        overflow: hidden;
+        transition: height .2s;
+    }
+    li.open {
+        &>.expander::before {
+            content: '[-]';
+        }
+        &>.children {
+            height: auto;
+        }
+    }
+}

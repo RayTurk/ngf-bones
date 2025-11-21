@@ -1,0 +1,33 @@
+
+
+.tbl {
+    margin-bottom: 40px;
+}
+.tbl thead th {
+    color: #999;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+.tbl td,
+.tbl th {
+    border-bottom: 1px solid #EEE;
+    padding: 10px 10px 10px 0;
+    font-size: 14px;
+}
+.tbl td .note {
+    background: #fffee6;
+    color: #877a57;
+}
+.tbl .col-1 {
+    width: 80px;
+}
+.tbl .col-2 {
+    width: 140px;
+}
+.tbl .col-3 {
+    width: 160px;
+}
+.tbl td a {
+    text-decoration: none;
+}
+

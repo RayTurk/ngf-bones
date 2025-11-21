@@ -1,0 +1,19 @@
+# WordPress
+.DS_Store
+Thumbs.db
+*.log
+
+# Node modules (if using build tools)
+node_modules/
+npm-debug.log*
+
+# Build artifacts (if applicable)
+*.min.css
+*.min.js
+dist/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
