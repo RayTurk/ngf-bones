@@ -1,0 +1,86 @@
+.logo_inline_cta {
+    .cta {
+        padding: 0 15px;
+        @include MQ(M) {
+            padding: 0 15px;
+            flex: 1 1 160px;
+            
+        }
+    }
+    .dropdown-menu {
+        margin: 0;
+        padding: 0;
+        border: none;
+        box-shadow: none;
+    }
+    
+    .navbar-nav {
+        text-align: left;
+        li {
+            display: block;
+            margin: 0;
+            a {
+                text-decoration: none;
+                padding: 16px;
+            }
+        }
+        @include MQ(M) {
+            &>li:hover>.dropdown_menu {
+                display: block;
+            }
+        }
+    }
+    .navbar-collapse {
+        padding-bottom: 1em;
+        position: absolute;
+        left: 0;
+        background: #fff;
+        width: 100%;
+        top: 0;
+        z-index: 200;
+        text-align: right;
+        .navbar-toggler {
+            padding: 15px 0;
+            svg {
+                width: 12px;
+            }
+
+
+        }
+        @include MQ(M) {
+            position: static;
+            padding: 0 15px;
+        }
+    }
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        padding: 1em 0;
+    }
+    .container {
+        width:100%;
+        padding: 0;
+        @include MQ(M) {
+            width: 960px;
+            
+        }
+        @include MQ(L) {
+            width: 1140px;
+        }
+    }
+    .navbar-toggler {
+        background: none;
+        padding: 0;
+        align-self: center;
+        padding: 15px;
+    }
+
+    
+
+    .navbar-toggler-icon {
+        width: auto;
+        height: auto;
+    }
+}

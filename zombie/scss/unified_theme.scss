@@ -1,0 +1,97 @@
+/*Unified Theme CSS*/
+
+/*Optimized Bootstrap*/
+/*!
+ * Bootstrap v4.0.0-alpha.6 (https://getbootstrap.com)
+ * Copyright 2011-2017 The Bootstrap Authors
+ * Copyright 2011-2017 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+// Core variables and mixins
+@import "../../zombie/scss/bootstrap/variables";
+@import "../../zombie/scss/bootstrap/mixins";
+@import "../../zombie/scss/bootstrap/custom";
+#mceu_123 {
+    display: none;
+}
+
+
+// Reset and dependencies
+@import "../../zombie/scss/bootstrap/normalize";
+@import "../../zombie/scss/bootstrap/print";
+
+// Core CSS
+@import "../../zombie/scss/bootstrap/reboot";
+//@import "../scss/bootstrap/type";
+//@import "../scss/bootstrap/images";
+//@import "../scss/bootstrap/code";
+@import "../../zombie/scss/bootstrap/grid";
+//@import "../scss/bootstrap/tables";
+//@import "../scss/bootstrap/forms";
+//@import "../scss/bootstrap/buttons";
+// Components
+@import "../../zombie/scss/bootstrap/transitions";
+@import "../../zombie/scss/bootstrap/dropdown";
+//@import "../scss/bootstrap/button-group";
+//@import "../scss/bootstrap/input-group";
+//@import "../scss/bootstrap/custom-forms";
+@import "../../zombie/scss/bootstrap/nav";
+@import "../../zombie/scss/bootstrap/navbar";
+@import "../../zombie/scss/bootstrap/card";
+//@import "../scss/bootstrap/breadcrumb";
+//@import "../scss/bootstrap/pagination";
+//@import "../scss/bootstrap/badge";
+//@import "../scss/bootstrap/jumbotron";
+@import "../../zombie/scss/bootstrap/alert";
+//@import "../scss/bootstrap/progress";
+//@import "../scss/bootstrap/media";
+//@import "../scss/bootstrap/list-group";
+//@import "../scss/bootstrap/responsive-embed";
+//@import "../scss/bootstrap/close";
+@import "../../zombie/scss/bootstrap/ie9fix";
+
+.ie {
+    .cardwarp {
+        float: left;
+    }
+}
+// Components w/ JavaScript
+//@import "../scss/bootstrap/modal";
+//@import "../scss/bootstrap/tooltip";
+//@import "../scss/bootstrap/popover";
+//@import "../scss/bootstrap/carousel";
+ 
+// Utility classes
+@import "../../zombie/scss/bootstrap/utilities";
+@import "../../zombie/scss/bxslider";
+//NGF Custom Addons: 5 Column Grid
+@import "../../zombie/scss/ngf/5col";
+//Styles for Atoms 
+@import "atoms.scss";
+
+@import '../../zombie/scss/lightboxsettings';
+@import '../../zombie/scss/lightboxmain';
+@import '../../zombie/scss/tribe';
+//Styles for Atoms 
+@import "../../zombie/scss/templates";
+
+
+#swatch_primary {
+    .sg-swatch {
+        background:$color-primary;
+    }
+    .value:before {
+        content: '#{$color-primary}';
+    }
+}
+#swatch_secondary {
+    .sg-swatch {
+        background:$color-secondary;
+    }
+    .value:before {
+        content: '#{$color-secondary}';
+    }
+}
+
+

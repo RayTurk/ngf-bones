@@ -1,0 +1,312 @@
+@import 'bourbon'; // http://bourbon.io/
+
+@import '../partials/layout'; // responsive grid and media queries
+
+// color palette - these colors will be the color swatches of the Colors section
+
+$color-1: #0061B3; // Dark Blue
+$color-2: #00B3AC; // Seagreen
+$color-3: #fff; // White
+$color-4: #E6F0F8; // light blue
+$color-primary: $color-1;
+$color-secondary: $color-2;
+$color-primary-accent: $color-3;
+$color-primary-accent2: $color-4;
+$head1: 1.5em;
+$body: #555; // Body text
+
+// additional colors
+
+$success: #6fce72; // green
+$alert: $color-3;  // red
+
+// fonts
+
+$primary-font: 'Lato', sans-serif;
+$secondary-font: 'Lato', sans-serif;
+img, svg {
+    max-width: 100%;
+    height: auto;
+}
+.alignleft, .alignright, {
+	margin: 0 0 1em;
+	display:block;
+}
+.aligncenter {
+	margin: 0 auto 1em;
+	display: block;
+}
+@media (min-width:992px) {
+	.alignleft {
+		float: left;
+		margin: 0 1em 1em 0;
+	}
+	.alignright {
+		float: right;
+		margin: 0 0 1em 1em;
+	}
+}
+
+/* -------------------------------- 
+
+xBackground 
+
+-------------------------------- */
+html {
+	font-size: 100%;
+}
+body {
+	/* this is the page background */
+	background-color: white;
+	color: $body;
+	font-family: $primary-font;
+	@include MQ(S) {
+		font-size: 1em;
+	}
+}
+
+/* -------------------------------- 
+
+xPatterns
+
+-------------------------------- */
+
+.cd-box {
+	/* this is the container of various design elements - i.e. the 2 logo of the branding section */
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	background: white;
+	box-shadow: 0 1px 1px rgba(#000, .05);
+	padding: 1.5em;
+}
+
+.cd-box.rev {
+    background:black;
+    border:none;
+}
+
+
+
+
+/* -------------------------------- 
+
+xTypography 
+
+-------------------------------- */
+
+h1, h2, h3, h4, h5 {
+	font-family: $primary-font;
+	color: inherit;
+    font-weight: 900;
+	line-height: 1.2;
+	margin: 0 0 .5em;
+    
+}
+h1 {
+	font-size: $pt30;
+	
+
+	
+	@include MQ(M) {
+		font-size: $pt58;
+	}
+}
+h2 {
+    color: $color-1;
+    font-size:1.5em;
+    font-size: $pt30;
+	@include MQ(M) {
+		font-size: $pt38;
+	}
+}
+h3 {
+    
+    font-weight:bold;
+    @include MQ(S) {
+		font-size: 1.25em;
+	}
+	@include MQ(M) {
+		font-size: 1.5em;
+	}
+}
+h4 {
+    
+    font-size: 1.125em;
+    
+	@include MQ(M) {
+		font-size: 1.25em;
+	}
+}
+h5 {
+    
+    font-size: 1em;
+    font-weight:bold;
+    
+}
+
+a {
+		color: $color-1;
+		text-decoration: underline;
+	}
+p {
+	
+	line-height: 1.4;
+	margin: 0 0 1.5em;
+
+	
+
+	@include MQ(S) {
+		font-size: 1em;
+		line-height: 1.6;
+	}
+}
+ul, ol {
+	padding-left: 1.5em;
+	
+}
+ul {
+	list-style-type: disc;
+}
+ol {
+	list-style-type: decimal;
+}
+li {
+	
+	line-height: 1.4;
+	margin: 0 0 1em;
+
+	
+
+	@include MQ(S) {
+		font-size: 1em;
+		line-height: 1.6;
+	}
+}
+
+/* -------------------------------- 
+
+xButtons 
+
+-------------------------------- */
+
+.btn {
+    display: inline-block;
+	border: 1px solid;
+	box-shadow: none;
+	border-radius: 0;
+    font-weight:bold;
+    text-transform:uppercase;
+	text-decoration: none;
+	font-weight: 900;
+	color: $color-3;
+	padding: .6em 2.2em;
+	cursor: pointer;
+	background: $color-1;
+	text-shadow: none;
+	&:focus {
+		
+	}
+
+	&:hover {
+		background: lighten($color-1, 10%);
+		color: #fff;
+		text-decoration: none;
+	}
+
+	
+
+	@include MQ(S) {
+		
+	}
+}
+.btn2 {
+    @extend .btn;
+		background: #fff;
+        color: $color-1;
+        border: none;
+
+		.no-touch &:hover {
+			background: lighten($color-2, 10%);
+		}
+	}
+.btn-v3 {
+    @extend .btn;
+		background: $alert;
+
+		.no-touch &:hover {
+			background: lighten($color-3, 10%);
+		}
+	}
+.btn-v4 {
+    @extend .btn;
+		color: $color-1;
+		background: transparent;
+		box-shadow: inset 0 0 0 1px $color-1;
+
+		.no-touch &:hover {
+			color: $color-3;
+			background: $color-1;
+		}
+	}
+
+.cd-buttons .cd-box:nth-of-type(2) span {
+	/* CSS class name color */ 
+	color: $color-1;
+}
+
+
+/* -------------------------------- 
+
+xForm 
+
+-------------------------------- */
+
+input[type=text], select, textarea {
+	border: 1px solid $color-4;
+	border-radius: 0;
+	background: $color-3;
+
+	&:focus {
+		outline: none;
+	}
+}
+input[type="submit"] {
+	@extend .btn;
+}
+
+
+select {
+	position: relative;
+	padding: .6em 2em .6em 1em;
+	cursor: pointer;
+    height: auto;
+	
+}
+
+
+.gform_wrapper.gravity-theme .gfield {
+    input, select, textarea {
+        border: 1px solid $body !important;
+        padding: 5px 10px;
+    }
+    select {
+        height: 41px;
+    }
+    input[type="checkbox"] {
+        width: 15px;
+        height: 15px;
+
+    }
+}
+/** table **/
+table {
+    width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #D4d4d4;
+    margin: 0 0 1.5em;
+	th, td {
+		padding: 2px 5px;
+		border: 1px solid #d4d4d4;
+	}
+}

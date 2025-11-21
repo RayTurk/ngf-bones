@@ -1,0 +1,116 @@
+.cd-typography {
+    .cd-box h2:before {
+        display:none;
+    }
+}
+.cd-color-swatch:before, .cd-color-swatch:after {
+    display: none;
+}
+/* -------------------------------- 
+
+xNavigation 
+
+-------------------------------- */
+
+header {
+	background: $color-3;
+    box-shadow:none!important;
+    border-bottom:1px solid rgba(0,0,0,.08);
+}
+
+.cd-logo {
+	/* logo box style */
+	/*background-color: $color-1;*/
+	width: 120px;
+
+	@include MQ(M) {
+		width: 180px;
+	}
+}
+
+.cd-main-nav {
+	/* main navigation background color - full screen on small devices */
+	background: $color-1;
+
+	li a {
+		color: #d9d9d9;
+		border-color: lighten($color-2, 5%);
+	}
+
+	@include MQ(M) {
+		li a {
+			color: lighten($color-2, 40%);
+
+			&.selected {
+				box-shadow: 0 2px 0 $color-1;
+			}
+
+			.no-touch &:hover {
+				color: $color-3;
+			}
+		}
+	}
+}
+
+.cd-nav-trigger span {
+	/* hamburger menu */
+	background-color: $color-3;
+
+	&::before,
+	&::after {
+		/* upper and lower lines */
+		background-color: $color-3;
+	}
+}
+
+.nav-is-visible .cd-nav-trigger span {
+	/* hide line in the center on mobile when nav is visible */
+	background-color: rgba($color-3, 0);
+
+	&::before, &::after {
+		/* preserve visibility of upper and lower lines - close icon */
+		background-color: rgba($color-3, 1);
+	}
+}
+.cd-typography {
+    .cd-box h2:before {
+        display:none;
+    }
+}
+/* -------------------------------- 
+
+xIcons 
+
+-------------------------------- */
+
+.cd-icons li {
+	/* icons size */
+	width: 32px;
+	height: 32px;
+}
+
+.cd-download {
+	/* download button top-right visible on big devices */
+	background-color: lighten($color-2, 10%);
+    background-color: white;
+
+	.no-touch &:hover {
+		background-color: #dedede;
+	}
+
+	span {
+		/* tooltip */
+		background: $color-1;
+		color: $color-3;
+
+		&::before {
+			/* right arrow color */
+			border-color: $color-1;
+		}
+	}
+}
+@media only screen and (min-width: 1024px) {
+    .cd-buttons button {
+        margin: 1em .5em;
+    }
+}

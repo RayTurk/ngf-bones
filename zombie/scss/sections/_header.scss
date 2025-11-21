@@ -1,0 +1,181 @@
+.default_header {
+    #header {
+        padding:15px 0;
+        p {
+            margin:0;
+        }
+        .phone {
+            font-size: 1.5em;
+            font-weight:bold;
+            text-decoration: none;
+            color:inherit;
+            &:hover {
+                opacity:.6;
+                color: inherit;
+            }
+        }
+        .cta {
+            font-size: 1.5em;
+        }
+        .logo {
+            img {
+                margin-bottom:1em;
+                max-width: 85%;
+            }
+        }
+        
+    }
+    #navigation {
+        a {
+            font-weight: normal;
+            text-decoration: none;
+        }
+        background: $color-primary;
+        .navbar-toggler {
+            background: none;
+            color: #333333;
+            padding: 1.25em 0;
+            font-size: 1em;
+            align-self: flex-end;
+            &:hover {
+                background:none;
+            }
+        }
+        .navbar {
+            margin: 0;
+            padding:0;
+
+        }
+        .navbar-nav {
+            max-width: 100%;
+            margin: 0 !important;
+            width: auto;
+            &>li {
+                margin: 0;
+                &>a {
+                    padding: .5em 1em;
+                    color:#333;
+                    &:hover {
+                        color:$color-primary-accent2;
+                    }
+                }
+
+            }
+            li {
+                &:hover>.dropdown-menu {
+                    display: block;
+                }
+            }
+            .dropdown-menu {
+                max-width: 100%;
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                border-radius: 0;
+                box-shadow: none;
+                background: #333;
+                li {
+                    display: block;
+                    margin: 0;
+                    a {
+                        font-size: .875em;
+                        padding: .5em 2em;
+                        color: #ababab;
+                        &:hover {
+                            color: #fff;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+@media (min-width:768px) {
+    .default_header {
+        #header {
+            .row>div {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                flex-direction: column;
+
+            }
+            img {
+                padding: 0;
+            }
+            #address {
+                display: block;
+            }
+            .phonewrap {
+                font-size: 1em;
+                span {
+                    display: inline;
+                }
+            }
+            .logo {
+                img {
+                    margin-bottom:0;
+                    max-width:100%;
+                }
+            }
+        }
+        #navigation {
+            .navbar-nav {
+                &>li>a {
+                    font-size: 1.125em;
+                    padding: .25em .5em;
+                }
+            }
+            .navbar-nav .dropdown-menu {
+                min-width: 200px;
+                li a {
+                    padding: 5px 10px;
+                }
+            }
+            .navbar-nav .depth_1 {
+                top: 0;
+                left: 95%;
+            }
+        }
+    }
+}
+@media (max-width:991px) {
+    .default_header {
+        #navigation {
+            .container {
+                width: 100%;
+
+            }
+            .navbar-collapse {
+                margin: 0 -15px;
+            }
+            .navbar-nav {
+                .dropdown-menu {
+                    
+                }
+            }
+        }
+    }
+}
+@media (min-width:992px) {
+    #navigation {
+        .navbar-nav {
+            &>li>a {
+                font-size: 1.125em;
+                padding: .25em .5em;
+            }
+        }
+        .navbar-nav .dropdown-menu {
+            min-width: 200px;
+            li a {
+                padding: 5px 10px;
+            }
+        }
+        .navbar-nav .depth_1 {
+            top: 0;
+            left: 95%;
+        }
+    }
+}

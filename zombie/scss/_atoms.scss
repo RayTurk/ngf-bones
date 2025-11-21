@@ -1,0 +1,447 @@
+
+//To update your styleguilde compile /scss/unified_theme.scss into /css/unified_theme.css
+//google font import comes here
+
+/*Variables: Change these to update Global Colors and Font Stack */
+
+//Swatch Config: for the most part you don't need to change the colors the texures should have their filename and background color assigned though.
+img, svg {
+    max-width: 100%;
+    height: auto;
+}
+#swatch_primary {
+    .sg-swatch {
+        background:$color1;
+    }
+    .name:before {
+        content: '#{$color1-name}';
+    }
+    .value:before {
+        content: '#{$color1}';
+    }
+}
+#swatch_secondary {
+    .sg-swatch {
+        background:$color2;
+    }
+    .name:before {
+        content: '#{$color2-name}';
+    }
+    .value:before {
+        content: '#{$color2}';
+    }
+}
+#swatch3 {
+    .sg-swatch {
+        background:$color3;
+    }
+    .name:before {
+        content: '#{$color3-name}';
+    }
+    .value:before {
+        content: '#{$color3}';
+    }
+}
+#swatch4 {
+    .sg-swatch {
+        background:$color4;
+    }
+    .name:before {
+        content: '#{$color4-name}';
+    }
+    .value:before {
+        content: '#{$color4}';
+    }
+}
+#texture1 {
+    .sg-swatch {
+        background-image: $texture1;
+        
+    }
+}
+#texture2 {
+    .sg-swatch {
+        background-color: $color2;
+        background-image: $texture2;
+    }
+}
+#texture3 {
+    .sg-swatch {
+        background-color: $color3;
+        background-image: $texture2;
+    }
+}
+.basic-font span:before {
+    content: '#{$basic-font}'
+}
+.font-secondary span:before {
+    content: ' #{$headline-font}'
+}
+/* ATOM STYLES */
+            
+    /* Fonts */
+    body {
+        font-family: $basic-font;
+        color:#555;
+        line-height: 1.6em;
+    }
+    .font-secondary {
+        font-family: $headline-font;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        font-family: $headline-font;
+        font-weight:normal;
+    }
+    h1 {
+        color:white;
+        font-weight:bold;
+        font-size:1.5em;
+        text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+             0px 8px 13px rgba(0,0,0,0.1),
+             0px 18px 23px rgba(0,0,0,0.1);
+    }
+    h2 {
+        font-size:1.375em;
+        font-weight:400;
+        color:$color1;
+    }
+    h3 {
+        font-size:1.125em;
+        color:#555;
+        font-weight:700;
+    }
+    h4 {
+        font-size:1.125em;
+        color:$color1;
+        font-weight:700;
+    }
+    h5 {
+        color:$color2;
+        font-weight:700;
+    }
+    h6 {
+        color:$color1;
+        font-weight:700;
+    }
+    acronym:hover {
+        cursor: help;
+    }
+    /* Animations */
+    .animate-fade {
+        opacity: 1;
+        cursor: pointer; 
+        cursor: hand;
+        max-width: 431px;
+        transition-duration: .3s;
+    }
+    .animate-fade:hover {
+        opacity: 0;
+    }
+
+    
+    
+    
+
+    /* Text Links */
+a.a-text-btn:hover {
+    opacity:.5;
+}
+    a, a.a-text-btn {
+        color:$color2;
+        text-decoration:underline;
+        font-style:italic;
+        &:hover {
+            text-decoration:none;
+        }
+        &:active {
+            color:$color3;
+            text-decoration:none;
+            font-style:italic;
+            opacity:1;
+        }
+    }
+    /*buttons */
+        .btn, input[type="submit"], input[type="button"] {
+            background:$color1;
+            font-size:1.125em;
+            font-weight:bold;
+            text-transform:uppercase;
+            color:#fff;
+            padding:.75em 1.75em;
+            cursor:pointer;
+            cursor:hand;
+            border:1px solid #fff;
+            border-radius:1px;
+            text-decoration: none;
+            font-style: normal;
+            display:inline-block;
+            font-size: 1.3068em;
+            &:hover {
+            text-decoration: none;
+                color:white;
+                background-color:$color2;
+            }
+            &:active {
+                color: #fff;
+                -webkit-box-shadow: inset 0px 0px 5px 2px rgba(0,0,0,0.25);
+                -moz-box-shadow: inset 0px 0px 5px 2px rgba(0,0,0,0.25);
+                box-shadow: inset 0px 0px 5px 2px rgba(0,0,0,0.25);
+            }
+            &:focus {
+                color: #fff;
+                text-decoration: none;
+            }
+        }
+.btn.alt {
+    background-color:white;
+    color:$color1;
+    border:1px solid #e2e2e2;
+    &:hover {
+        background-color:$color2;
+        color:white;
+        border:1px solid rgba(255,255,255,0);
+    }
+}
+button {
+    font-family: $basic-font;
+}
+    /* Progress Bar */
+    .progress-container {
+        border: 1px solid #ddd;
+        border-radius:3px;
+        display: inline-block;
+        padding: .75em 2em .55em 2em;
+        background-color:$color3;
+    }
+    progress.a-progress {
+        background-color: #color2;
+        height: 15px;
+        border-radius:8px;
+        width: 250px; 
+        -webkit-box-shadow: inset 0px 0px 3px 1px rgba(0,0,0,0.15);
+        -moz-box-shadow: inset 0px 0px 3px 1px rgba(0,0,0,0.15);
+        box-shadow: inset 0px 0px 3px 1px rgba(0,0,0,0.15);
+    }
+    progress.a-progress::-webkit-progress-bar {
+        background-color: $color2;
+        height: 15px;
+        border-radius:8px;
+        width: 250px; 
+        -webkit-box-shadow: inset 0px 0px 3px 1px rgba(0,0,0,0.15);
+        -moz-box-shadow: inset 0px 0px 3px 1px rgba(0,0,0,0.15);
+        box-shadow: inset 0px 0px 3px 1px rgba(0,0,0,0.15);
+    }
+    progress.a-progress::-webkit-progress-value {
+        height:15px;
+            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#a1ce56+0,81cc00+100 */
+            background: $color2; /* Old browsers */
+            background: -moz-linear-gradient(top, $color2 0%, $color3 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(top, $color2 0%,$color3 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom, $color2 0%,$color3 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a1ce56', endColorstr='#68A500',GradientType=0 ); /* IE6-9 */
+        border-radius:8px 0 0 8px;
+    }
+    progress.a-progress::-moz-progress-bar {
+        background-color: #f3f3f3;
+        height: 15px;
+        border-radius:8px;
+        width: 250px; 
+        -webkit-box-shadow: inset 0px 0px 3px 1px rgba(0,0,0,0.15);
+        -moz-box-shadow: inset 0px 0px 3px 1px rgba(0,0,0,0.15);
+        box-shadow: inset 0px 0px 3px 1px rgba(0,0,0,0.15);
+
+    }
+
+    /* Blockquote */
+    blockquote {
+        background:#fff;
+        border-left: 10px solid $color2;
+        border-radius:0 3px 3px 0;
+        margin: 1em 0 0 0;
+        padding: 1.5em;
+        quotes: "\201C""\201D""\2018""\2019";
+        -moz-box-shadow: 2px 2px 15px #ccc;
+        -webkit-box-shadow: 2px 2px 15px #ccc;
+        box-shadow: 2px 2px 15px #ccc;
+    }
+    blockquote:before {
+        color: $color2;
+        content: open-quote;
+        font-size: 4em;
+        line-height: 0.1em;
+        margin-right: 0.15em;
+        vertical-align: -0.4em;
+    }      
+blockquote:after {
+        color: $color2;
+        content: close-quote;
+        font-size: 4em;
+        line-height: 0.1em;
+        margin-left: 0.15em;
+        vertical-align: -0.4em;
+    }    
+    blockquote p {
+        display: inline;
+        
+    }
+p, li {
+    font-size: 1em;
+}
+    /* Address */
+    .address_title {
+        font-weight: bold;
+        color:black;
+    }
+    .address_title:hover {
+        opacity:.5;
+        color:black;
+        text-decoration:none;
+    }
+    .address_title:focus {
+        color:black;
+        text-decoration: none;
+    }
+
+    /* Lists */
+    li, dd {
+        margin-bottom: .5em;
+    }
+    dt {
+        font-family: $headline-font;
+    }
+    ul, ol, menu, dir {
+        max-width:100%;
+        li {
+            margin-bottom:.75em;
+        }
+    }
+
+
+    /* Forms */
+    
+
+    input, textarea {
+        line-height: 1.5em;
+        padding:10px 5px;
+        border:1px solid #ccc;
+        border-radius:3px;
+        font-family: 'Open Sans', 'Helvetice Neue', 'Helvetica', 'Arial', sans-serif;
+    }
+    input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+                  color: #d9d9d9;
+                }
+    input::-moz-placeholder, textarea::-moz-placeholder { /* Firefox 19+ */
+                  color: #d9d9d9;
+                }
+    input#f1:-ms-input-placeholder, textarea#f2:-ms-input-placeholder { /* IE 10+ */
+                  color: #d9d9d9;
+                }
+    input#f1:-moz-placeholder, textarea#f2:-moz-placeholder { /* Firefox 18- */
+                  color: #d9d9d9;
+                }
+
+    legend {
+        font-family: 'Bitter', 'Times New Roman', 'Times', serif;
+    }
+    select {
+        height: 29px;
+    }
+    select {
+        border-radius:3px;
+        width:200px;
+    }
+    select option {
+        padding: 3px 6px;
+    }
+
+    /* Tables */
+    table {
+        width:100%;
+        max-width:500px;
+        border-collapse:separate;
+        border:solid #ddd 1px;
+        border-radius:3px;
+        -moz-border-radius:3px;
+    }
+    tr {
+        background: #eee;
+    }
+    tr:nth-child(even){
+        background-color: #fcfcfc;
+    }
+    th, td {
+        padding:2px 5px;
+    }
+    .top-row {
+        text-transform:uppercase;
+    }
+    table caption {
+        padding-top: .25rem;
+        color:#808080;
+    }
+
+
+    .limited {
+        max-width:500px;
+    }
+
+    /* Images */
+    .imgBorder_1 {
+        
+    }
+    .imgBorder_2 {
+        padding: 3px;
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#a1ce56+0,50662a+100 */
+        background: $color1;
+        border-radius:5px;
+    }
+    .imgBorder_3 {
+        padding:4px;
+        border:1px solid $color2;
+    }
+    .imgBorder_4 {
+        border-radius:100%;
+    }
+    .alignleft, .alignright {
+        margin:1em 0;
+        display:block;
+    }
+
+
+/* MOLECULE STYLES */
+
+/* ORGANISM STYLES */
+@media (min-width: 768px) {
+    p, li {
+        font-size: 1em;
+    }
+    .btn {
+        font-size: 1.063em;
+    }
+    
+    h1 {
+     
+        font-size:2.375em;
+        line-height: 1em;
+    }
+    h2 {
+        font-size:2.125em;
+        line-height: 1em;
+    }
+    h3 {
+        font-size:1.5em;
+     
+    }
+}
+@media (min-width: 992px) {
+    .alignleft {
+        float: left;
+        width: auto;
+        margin:0 1.5em 1.5em 0;
+    }
+    .alignright {
+        float: right;
+        width: auto;
+        margin:0 0 1.5em 1.5em;
+    }
+}

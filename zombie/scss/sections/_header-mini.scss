@@ -1,0 +1,185 @@
+#header.mini_header {
+    .container {
+        width: 100%;
+    }
+    a {
+        text-decoration: none;
+    }
+    padding: .5em 0;
+    border-bottom: 1px solid #ddd;
+    .logo_col {
+        flex: 0 0 200px;
+        display:flex;
+        justify-content: center;
+        flex-direction: column;
+        a {
+            line-height: 1em;
+        }
+        img {
+            margin: 0;
+        }
+    }
+    .toggler {
+        flex: 0 0 100px;
+        display:flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .menu {
+        flex: 0 0 100%;
+        clear: both;
+        padding: 0;
+    }
+    .navbar_collapse {
+        padding: 0;
+    }
+    .navbar {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 0;
+        margin: 0;
+        .navbar-toggler {
+            background: none;
+            color: #4f4f50;
+            text-align: center;
+            padding: .25em;
+            margin: 0;
+            i {
+                font-size:1.5em;
+            }
+            span {
+                font-size: .7em;
+            }
+        }
+    }
+    .navbar-nav {
+        display: block;
+        margin: 0;
+        width: 100%;
+        max-width: none;
+        li {
+            margin: 0;
+        }
+        &>li>a {
+            color: inherit;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: .938em;
+        }
+        .dropdown-menu {
+            margin: 0;
+            max-width: none;
+            border-radius: 0;
+            background: $color-secondary;
+            margin: 0 -15px;
+            padding: .5em 0;
+            border:none;
+            li {
+                margin: 0;
+                a {
+                    color: $color-primary;
+                    padding: .75em 1em .75em 1.5em;
+                    font-size: .8em;
+                }
+            }
+            li:first-child a {
+                
+            }
+            .dropdown-menu  {
+                color:red!important;
+            }
+        }
+        .dropdown-menu.depth_1 {
+            background: white;
+            margin:0;
+            li {
+                a {
+                    padding: .75em 1em .75em 1.75em;
+                    color:$color-secondary;
+                }
+            }
+        }
+    }
+}
+@media (min-width:992px) {
+    #header.mini_header {
+        padding: 0;
+        .navbar {
+            &>div {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            .logo_col {
+                flex: 0 0 25%;
+                a {
+                    display: block;
+                    max-width: 200px;
+                }
+                
+            }
+            .menu {
+                flex: 0 0 75%;
+                text-align: right;
+            }
+            .navbar-nav {
+                justify-content: flex-end;
+                border-radius: 0;
+                text-align: right;
+                li:hover>.dropdown-menu {
+                    display: block;
+                }
+                &>li a {
+                    padding: 1.5em .5em;
+                    
+                    font-size:.85em;
+                    
+                }
+                .dropdown-menu {
+                    min-width: 220px;
+                    width: max-content;
+                    border:1px solid white;
+                    .dropdown-toggle::after {
+                        transform: rotate(-90deg);
+                    }
+                    li {
+                        display:block;
+                        a {
+                            padding: .375em .75em;
+                            &:hover {
+                                color:$color-primary;
+                            }
+                        }
+                    }
+                }
+                .dropdown-menu.depth_1 {
+                    width: 100%!important;
+                    position: absolute;
+                    left: 95%;
+                    top: 6px;
+                }
+            }
+        }
+        .container {
+            width: 960px;
+            max-width: 100%;
+        }
+    }
+}
+@media (min-width:1200px) {
+    #header.mini_header {
+        .container {
+            width: 1140px;
+            max-width: 100%;
+        }
+        .navbar {
+            .navbar-nav {
+                &>li a {
+                    font-size:.925em;
+                    padding: 1.5em .75em;
+                }
+            }
+        }
+    }
+}

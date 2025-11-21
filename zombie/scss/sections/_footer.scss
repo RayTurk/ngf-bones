@@ -1,0 +1,45 @@
+#footer.two_column {
+    padding: 1em 0;
+    background: $color2;
+    color: #fff;
+    a {
+        color: inherit;
+    }
+    .menu {
+        .title {
+            display: none;
+        }
+        ul {
+            margin: 0 0 1em;
+            padding: 0;
+            max-width: 100%;
+            li {
+                display: block;
+                a {
+                    padding: .25em 1em;
+                    text-decoration: none;
+                    &:hover {
+                        opacity: .8;
+                    }
+                }
+            }
+        }
+    }
+    .slb {
+        margin: 0 0 1em;
+        p {
+            margin: 0;
+        }
+    }
+}
+@media (min-width:992px) {
+    #footer.two_column {
+        .menu ul li {
+            display: inline-block;
+            a {
+                padding-right: 0;
+                
+            }
+        }
+    }
+}
