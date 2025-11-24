@@ -1,24 +1,42 @@
-<div id="<?php echo get_sub_field('css_id') ;?>" class="page_section section_content_cta <?php echo get_sub_field('classes');?>"> 
-    <div class="container">
-        <?php
-            if( have_rows('slider') ):
+<?php
 
-                    echo '<div class="slider">';
+/**
+ * Template: Content Slider with CTA Section
+ * Location: /templates/section-content_slider_with_cta.php
+ *
+ * This template is called by the page builder when the 'content_slider_with_cta' layout is selected
+ * Replaces the old layout with Swiper.js implementation
+ * Used with ACF Flexible Content
+ */
 
-                    // loop through the rows of data
-                    while ( have_rows('slider') ) : the_row();
-                        echo'<div class="slide">';
-                        the_sub_field('slide');
-                        echo '</div>';
+$css_id = get_sub_field('css_id');
+$classes = get_sub_field('classes');
+$slider_items = get_sub_field('slider');
 
-                    endwhile;
+if (!$slider_items) {
+  return;
+}
+?>
 
-                    echo '</div>';
+<div id="<?php echo esc_attr($css_id); ?>"
+  class="page_section content_slider_section <?php echo esc_attr($classes); ?>">
 
-                endif;
-        ?>
-        <div class="cta">
-            <?php the_sub_field('cta_section');?>
-        </div>
-    </div>
+  <div class="container">
+    <?php get_atomic_part('/molecules/slider-content.php', 0); ?>
+  </div>
+
 </div>
+
+<style>
+  /* Content Slider Section Styles */
+  .page_section.content_slider_section {
+    padding: 60px 0;
+    background: #f8f9fa;
+  }
+
+  @media (max-width: 768px) {
+    .page_section.content_slider_section {
+      padding: 40px 0;
+    }
+  }
+</style>
